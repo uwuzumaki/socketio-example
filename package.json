@@ -1,0 +1,39 @@
+{
+  "name": "socketio-example",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/uwuzumaki/socketio-example#readme",
+  "bugs": {
+    "url": "https://github.com/uwuzumaki/socketio-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwuzumaki/socketio-example.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4",
+    "prisma": "^7.2.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.16.3",
+    "socket.io": "^4.8.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
