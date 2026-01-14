@@ -31,17 +31,16 @@ app.get("/", (req, res) => {
 
 io.on("connection", async (socket) => {
   socket.on("chat message", async (msg, clientOffset, callback) => {
-    console.log(msg);
     let result;
     try {
       // store the message in the database
       result = await db.run(
-        "INSERT INTO messages (content, client_offset) VALUES (?)",
+        "INSERT INTO messages (content, client_offset) VALUES (?, ?)",
         msg,
         clientOffset
       );
     } catch (e) {
-      console.log("error");
+      console.log(e);
       if (e.errno === 19) {
         callback();
       } else {
